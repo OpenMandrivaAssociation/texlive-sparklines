@@ -52,6 +52,7 @@ uses pgf, and does not work with pictex.
 %doc %{_texmfdistdir}/doc/latex/sparklines/README
 %doc %{_texmfdistdir}/doc/latex/sparklines/sparklines.pdf
 %doc %{_texmfdistdir}/doc/latex/sparklines/sparklines.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,3 +63,5 @@ uses pgf, and does not work with pictex.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
