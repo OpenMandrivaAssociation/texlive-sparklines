@@ -6,7 +6,7 @@
 # catalog-version 1.5
 Name:		texlive-sparklines
 Version:	1.5
-Release:	9
+Release:	10
 Summary:	Drawing sparklines: intense, simple, wordlike graphics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/sparklines
