@@ -1,18 +1,12 @@
-# revision 16131
-# category Package
-# catalog-ctan /graphics/sparklines
-# catalog-date 2009-11-22 10:21:09 +0100
-# catalog-license lppl
-# catalog-version 1.5
 Name:		texlive-sparklines
-Version:	1.7
-Release:	2
+Version:	42821
+Release:	1
 Summary:	Drawing sparklines: intense, simple, wordlike graphics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/sparklines
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sparklines.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sparklines.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sparklines.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sparklines.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ sparklines cannot appear in a dvi file. The sparklines package
 uses pgf, and does not work with pictex.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,24 +40,10 @@ uses pgf, and does not work with pictex.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.5-2
-+ Revision: 756152
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.5-1
-+ Revision: 719562
-- texlive-sparklines
-- texlive-sparklines
-- texlive-sparklines
-- texlive-sparklines
-
