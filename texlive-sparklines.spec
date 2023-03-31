@@ -1,6 +1,6 @@
 Name:		texlive-sparklines
 Version:	42821
-Release:	1
+Release:	2
 Summary:	Drawing sparklines: intense, simple, wordlike graphics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/sparklines
