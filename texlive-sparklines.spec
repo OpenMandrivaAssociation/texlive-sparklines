@@ -3,7 +3,7 @@ Version:	42821
 Release:	2
 Summary:	Drawing sparklines: intense, simple, wordlike graphics
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/sparklines
+URL:		https://www.ctan.org/tex-archive/graphics/sparklines
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sparklines.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sparklines.doc.r%{version}.tar.xz
